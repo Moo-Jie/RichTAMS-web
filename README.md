@@ -1,1 +1,3 @@
- A case study used for practice in the JAVA Web online course for beginner programmers, the server-side of the Talis learning assistance system web page, is written in JAVA code. The server-side project is named RichTAMS-web, and the startup class is also located within it.
+个人学习JAVA Web课程时的实践案例，Talis学习辅助系统网页的服务器端。
+基于springboot编写的服务器端项目RichTAMS-web，启动类位于其中。
+本项目仅用于个人备份。
