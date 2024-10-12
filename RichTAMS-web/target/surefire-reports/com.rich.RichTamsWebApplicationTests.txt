@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.rich.RichTamsWebApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.715 s - in com.rich.RichTamsWebApplicationTests

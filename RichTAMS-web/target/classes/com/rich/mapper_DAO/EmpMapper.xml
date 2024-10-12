@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mybatis自动把参数解析炜arg0，arg1,arg2............-->
+<mapper namespace="com.rich.mapper_DAO.EmpMapper">
+    <select id="list" resultType="com.rich.pojo.Emp">
+        select *
+        from emp
+            <where>
+                <if test="arg0 != null and arg0 != ''">
+                    name like concat('%',#{arg0},'%')
+                </if>
+                <if test="arg1 != null">
+                    and gender = #{arg1}
+                </if>
+                <if test="arg2 != null and arg3 != null">
+                    and entrydate between #{arg2} and #{arg3}
+                </if>
+            </where>
+        order by update_time desc
+    </select>
+
+    <delete id="deleteById">
+        delete from emp
+        where id in
+        <foreach collection="arg0" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
